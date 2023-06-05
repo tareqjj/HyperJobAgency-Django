@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title_heading }}</title>
+</head>
+<body>
+    {% if display %}
+        <h2>{{ title_heading }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <button type="submit">Create</button>
+        </form>
+    {% else %}
+        <div>Sign-up first!</div>
+    {% endif %}
+</body>
+</html>

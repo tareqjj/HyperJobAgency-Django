@@ -1,0 +1,15 @@
+{% extends 'base_list_view.html' %}
+
+{% block title %}Vacancies{% endblock %}
+
+{% block heading %}Vacancies{% endblock %}
+
+{% block content %}
+    {% for vacancy in vacancy_list %}
+        <div>
+            {{ vacancy.author }}: {{ vacancy.description }}
+        </div>
+    {% empty %}
+        <div>No vacancies yet!</div>
+    {% endfor %}
+{% endblock %}

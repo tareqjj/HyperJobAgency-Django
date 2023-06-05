@@ -1,0 +1,15 @@
+{% extends 'base_list_view.html' %}
+
+{% block title %}Resumes{% endblock %}
+
+{% block heading %}Resumes{% endblock %}
+
+{% block content %}
+    {% for resume in resume_list %}
+        <div>
+            {{ resume.author }}: {{ resume.description }}
+        </div>
+    {% empty %}
+        <div>No resumes yet!</div>
+    {% endfor %}
+{% endblock %}
